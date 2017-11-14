@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* 공용 스타일 */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  background-color: olive;
+  clear: both;
+  display: block;
+}
+
+
+/* 레이아웃 설계 */
+
+.container {
+  background-color: silver;
+}
+
+.header,
+.visual,
+.main-content,
+.slogan,
+.footer {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: yellow;
+  height: 110px;
+}
+
+.visual {
+  background-color: pink;
+  height: 120px;
+}
+
+.main-content {
+  background-color: blue;
+  padding: 30px 15px;
+  min-height: 400px;
+  /* height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; */
+}
+
+.group {
+  margin: 0 15px;
+}
+
+.group1 {
+  width: 250px;
+  float: left;
+  background-color: lime;
+}
+
+.group2 {
+  width: 380px;
+  float: left;
+  background-color: teal;
+}
+
+.group3 {
+  width: 190px;
+  float: left;
+  background-color: tomato;
+}
+
+.slogan {
+  background-color: orange;
+  padding: 15px 0;
+}
+
+.footer-bg {
+  background-color: purple;
+}
+
+.footer {
+  background-color: skyblue;
+  padding: 15px 0;
+}
