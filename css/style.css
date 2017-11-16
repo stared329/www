@@ -45,7 +45,36 @@ a:link, a:visited {
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: yellow;
+  color: #f00;
+}
+
+/* 숨김 콘텐츠 */
+
+.readable-hidden, .a11y {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* 건너뛰기 링크 */
+
+.a11y:focus {
+  top: 5px;
+  left: 50%;
+  /*부모의 50%의 값을 가짐*/
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: rect(auto, auto, auto, auto);
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  transform: translateX(-50%);
+  /*자신의 크기 절반만큼 왼쪽으로 이동*/
+  z-index: 10;
 }
 
 /* 공통 스타일 */
@@ -72,13 +101,15 @@ a:hover, a:focus {
 .header {
   background-color: #ffffff;
   position: relative;
+  padding: 0 30px 30px;
+  border-radius: 0 0 15px 15px;
 }
 
 /* 로고 */
 
 .logo {
   position: absolute;
-  top: 45px;
+  top: 48px;
   left: 65px;
 }
 
@@ -111,17 +142,18 @@ a:hover, a:focus {
 /* inline-block, textalign 방식 배치 */
 
 .member {
-  background-color: yellow;
   text-transform: uppercase;
   font-size: 0;
   text-align: right;
+  transform: translateX(10px);
 }
 .member a {
-  background-color: lightcoral;
   padding: 8px 10px;
 }
+.member a:focus {
+  outline: 1px #00e;
+}
 .member li {
-  background-color: aqua;
   display: inline-block;
   font-size: 1.4rem;
   padding: 10px 0;
@@ -129,6 +161,91 @@ a:hover, a:focus {
 .member li:nth-child(n+2)::before {
   content: ":";
 }
+
+/* 메인 메뉴 */
+
+.main-menu {
+  background: coral linear-gradient(to bottom, #ed8b2f 0%, #e86c00 35%, #e86c00 70%, #ed8b2f 100%);
+  background-color: coral;
+  /*color image(url, linear-gradient)*/
+  border-top: 2px solid #000;
+  /* width style color */
+  border-radius: 0 0 5px 5px;
+  height: 47px;
+  padding-left: 225px;
+}
+.main-menu>li {
+  float: left;
+  position: relative;
+}
+.main-menu>li:focus {
+  outline: none;
+}
+.main-menu span {
+  display: block;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-family: "Noto Sans Bold";
+  border-left: 2px solid rgba(255, 255, 255, .5);
+  padding: 0 20px;
+  line-height: 45px;
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+  /*오른쪽distance 아래distance 블러 색상 */
+}
+.main-menu span:hover, .main-menu>li:focus span {
+  color: #ffff00;
+}
+.main-menu span:hover::after, .main-menu>li:focus span::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
+}
+.sub-menu {
+  position: absolute;
+  top: 47px;
+  white-space: nowrap;
+  display: none;
+}
+.about-html {
+  left: 0;
+}
+.about-css {
+  left: 0;
+}
+.web-standards {
+  left: 0;
+}
+.web-accessability {
+  right: 0;
+}
+.qna {
+  right: 0;
+}
+.archive {
+  right: 0;
+}
+.sub-menu li, .sub-menu a {
+  display: inline-block;
+}
+.sub-menu a {
+  padding: 4px 10px 4px 0;
+}
+.sub-menu a::before {
+  content: "\e803";
+  font-family: "fontello";
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+.sub-menu a:hover::before {
+  content: "\e801";
+}
+.menu-act {
+  display: block !important;
+}
+
+/* 비주얼 */
+
 .visual {
   background-color: pink;
   height: 120px;
