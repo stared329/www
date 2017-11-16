@@ -1,34 +1,21 @@
-/* 메인 메뉴 제어하기 */
-window.onload = init;
-// 메인 페이지 초기화
-function init(){
-	var mainMenuLink = document.querySelectorAll(".main-menu > li > a");
-	for(var i=0; i<mainMenuLink.length; i++){
-		mainMenuLink[i].onmouseover = function(){
-			showSubMenu(this);
-		};
-		mainMenuLink[i].onfocus = function(){
-			showSubMenu(this);
-		};
-	}
-}
-// 메인메뉴 선택시 서브메뉴 출력
-function showSubMenu(targetNode){
-	// 모든 서브메뉴를 숨긴다.
-	var hideList = document.querySelectorAll(".main-menu > li > ul");
-	for(var i=0; i<hideList.length; i++){
-		hideList[i].style.display = "none";
-	}	
-	// 선택한 메인메뉴의 서브메뉴를 보여준다.
-	getElementNextSibling(targetNode).style.display = "block";
-}
-// 지정한 요소의 다음 노드를 반환한다.
-function getElementNextSibling(node){
-	var nextElement = node.nextSibling;
-	if(nextElement == null){
-		return null;
-	}else if(nextElement.nodeType != 1){
-		return getElementNextSibling(nextElement);
-	}
-	return nextElement;
-}
+//문서 준비 이벤트 웹브라우저가 html 렌더링을 완료했을 때 함수를 실행한다.
+$(document).ready(function() {
+  var menu = $('.main-menu > li');
+  var subMenu = $('.sub-menu');
+  var lastSub = $('.sub-menu li:last-child a'); //.마지막 li요소
+  //main-menu 하위의 span 요소가 hover 됐을 때 
+  menu.hover(function() {
+    $(this).find('.sub-menu').toggleClass('menu-act');
+  });
+  menu.focusin(function() { //cf.focus
+    $(this).find('.sub-menu').addClass('menu-act');
+  });
+  lastSub.focusout(function() {
+    $(this).parents('.sub-menu').removeClass('menu-act');
+  });
+
+  //   $(menu).hover(function() {
+  //     //this(=span)의 형제 중 sub-menu 클래스를 선택하면 menu-act 클래스를 토글시킨다.
+  //     $(this).siblings('.sub-menu').toggleClass('menu-act');
+  //   });
+});
