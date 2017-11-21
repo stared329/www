@@ -129,7 +129,7 @@
         <div class="term">
           <h2 class="term-heading">웹 관련 용어</h2>
           <!-- definition list -->
-          <dl class="term-list clearfix">
+          <dl class="term-list">
             <!-- definition term -->
             <dt class="term-list-heading">웹 표준 이란?</dt>
             <!-- definition describe -->
@@ -145,14 +145,86 @@
           <p>W3C 단체에서 규정한 웹기술 사양에 대한 규칙을 말하며 표준 규격은...</p>
         </div> -->
       </div>
-      <div class="group group2">group2</div>
-      <div class="group group3">group3</div>
+      <div class="group group2">
+        <div class="search">
+          <h2 class="readable-hidden">검색</h2>
+          <form class="search-form" action="javascript:alert('검색이 완료되었습니다.');">
+            <fieldset>
+              <legend>검색 폼</legend>
+              <label class="search-label" for="search">자료검색</label>
+              <input type="search" id="search" placeholder="검색어를 입력하세요." required>
+              <!-- <input type="submit" class="btn-search" value="검색" onclick="alert('검색');"> -->
+              <button type="submit" class="btn-search">검색</button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="board">
+          <div class="notice board-act">
+            <h2 id="notice-heading" class="notice-heading" tabindex="0">공지사항</h2>
+            <div class="notice-contents">
+              <ul class="notice-list">
+                <li>
+                  <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
+                  <time datetime="2017-11-21T14:50:15">2017.11.21</time>
+                </li>
+                <li>
+                  <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+                  <time datetime="2017-11-21T14:50:15">2017.11.21</time>
+                </li>
+                <li>
+                  <a href="#">KWCAG 2.1 소식</a>
+                  <time datetime="2017-11-21T14:50:15">2017.11.21</time>
+                </li>
+                <li>
+                  <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+                  <time datetime="2017-11-21T14:50:15">2017.11.21</time>
+                </li>
+                <li>
+                  <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+                  <time datetime="2017-11-21T14:50:15">2017.11.21</time>
+                </li>
+              </ul>
+              <a href="#" class="notice-more" aria-labelledby="notice-heading">더보기</a>
+            </div>
+          </div>
+          <div class="pds">
+            <h2 id="pds-heading" class="pds-heading" tabindex="0">자료실</h2>
+            <div class="pds-contents">
+              <ul class="pds-list">
+                <li>
+                  <a href="#">디자인 사이트 링크 모음</a>
+                  <time datetime="2017-11-21T14:50:15">2017.11.21</time>
+                </li>
+                <li>
+                  <a href="#">웹 접근성 관련 자료 모음</a>
+                  <time datetime="2017-11-21T14:50:15">2017.11.21</time>
+                </li>
+                <li>
+                  <a href="#">예제 샘플 응용해보기</a>
+                  <time datetime="2017-11-21T14:50:15">2017.11.21</time>
+                </li>
+                <li>
+                  <a href="#">웹 접근성 향상을 위한 국가 표준 기술 가이드라인</a>
+                  <time datetime="2017-11-21T14:50:15">2017.11.21</time>
+                </li>
+                <li>
+                  <a href="#">로얄티 프리 이미지 자료</a>
+                  <time datetime="2017-11-21T14:50:15">2017.11.21</time>
+                </li>
+              </ul>
+              <a href="#" class="pds-more" aria-labelledby="pds-heading">더보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" group group3 ">group3</div>
     </main>
-    <article class="slogan">
-      <h2 class="slogan-heading">슬로건</h2>
+    <article class="slogan ">
+      <h2 class="slogan-heading ">슬로건</h2>
     </article>
-    <div class="footer-bg">
-      <footer class="footer">풋터</footer>
+    <div class="footer-bg ">
+      <footer class="footer ">풋터</footer>
     </div>
   </div>
 </body>
