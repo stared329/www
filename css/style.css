@@ -964,10 +964,50 @@ figcaption {
 .slogan q::after {
   content: "";
 }
+
+/* 푸터 */
+
 .footer-bg {
-  background-color: purple;
+  background: #ccc linear-gradient(to bottom, #aaa 0%, #ccc 30%, #eee 60%, #fff 70%, #fff 100%);
 }
 .footer {
-  background-color: skyblue;
-  padding: 15px 0;
+  padding: 15px 140px 15px 180px;
+  position: relative;
+}
+
+/* 푸터 로고 및 뱃지 */
+
+.footer-logo {
+  position: absolute;
+  left: 35px;
+  top: 45px;
+}
+.tech-logo {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+
+/* 가이드 링크 */
+
+.guide {
+  background: #7b8385;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2px 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.guide a {
+  padding: 5px 10px;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* 주소 및 저작권 */
+
+address {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
 }
