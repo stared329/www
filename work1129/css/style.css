@@ -1,0 +1,376 @@
+@charset "utf-8";
+@import url("normalize.css");
+@import url("fonts.css");
+
+/* 공용 스타일 */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* css reset */
+
+html, body, button, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 본문 스타일 */
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'ValrelaRound-Regular', sans-serif;
+  font-size: 1.4rem;
+  color: #868686;
+  background-color: #fff;
+}
+
+/* 링크 스타일 */
+
+a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #868686;
+}
+
+/* 숨김 콘텐츠 */
+
+
+/* 크로스 브라우징에 필요하여 다양한 경우를 고려해서 없애야 함 line-height, font 사이즈 변경등의 옵션도 줘야할 경우가 있다 */
+
+.readable-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* 공통 스타일 */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.wrapper {
+  width: 720px;
+  margin: 80px auto;
+}
+figcaption {
+  font-family: 'PTSerif-Italic', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #b8b8b8;
+  line-height: 1.5;
+}
+.point-blue {
+  color: #1f4ba5;
+}
+.article-group1, .article-group2, .aside-group, footer {
+  position: relative;
+  /* padding-left: 120px; */
+}
+.article-categories {
+  font-family: 'Oswald-Bold', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.article-heading {
+  font-size: 4.8rem;
+  color: #222;
+  width: 480px;
+  padding-top: 25px;
+}
+.visual-group1 figcaption {
+  padding: 30px 0 50px 120px;
+}
+.article-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 520px;
+  margin-right: 120px;
+  font-family: 'PTSerif-Italic', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #b8b8b8;
+  text-align: right;
+}
+.article-info time {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.author-name {
+  font-family: 'Oswald-Bold', sans-serif;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.article-sub-heading::before {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: -40px;
+  content: "";
+  background: url('../images/icon-bookmarks.png') no-repeat;
+  width: 13px;
+  height: 15px;
+}
+.article-sub-heading {
+  font-family: 'PTSerif-Italic', sans-serif;
+  font-style: italic;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  width: 580px;
+  padding: 50px 0;
+}
+.visual-group {
+  float: left;
+  width: 960px;
+  margin-left: -120px;
+}
+.article-context {
+  font-size: 1.6rem;
+  line-height: 1.88;
+  width: 580px;
+}
+.article-group2 {
+  margin-top: 32px;
+}
+.visual-img-list li {
+  float: left;
+}
+.quote-group {
+  position: relative;
+  margin: 48px 0;
+  width: 520px;
+  height: 225px;
+}
+.quote-group q {
+  position: absolute;
+  font-family: 'PTSerif-Italic', sans-serif;
+  font-style: italic;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #222222;
+  /* margin-right: 45px; */
+  width: 360px;
+}
+.quote-group+p {
+  display: inline-block;
+}
+.quote-source {
+  position: absolute;
+  right: 0;
+}
+.quote-source figcaption {
+  padding-top: 20px;
+}
+.quote-source img {
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+}
+.quote-source-name {
+  font-family: 'Oswald-Bold', sans-serif;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #222;
+  display: block;
+  padding-bottom: 10px;
+}
+q::before {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: -40px;
+  content: "";
+  background: url('../images/icon-quote.png') no-repeat;
+  width: 13px;
+  height: 15px;
+}
+.article-content {
+  padding-top: 360px;
+}
+.visual-paging-group {
+  position: absolute;
+  top: 0;
+  display: block;
+}
+.visual-paging-group figcaption {
+  padding: 25px;
+  text-align: center;
+}
+.visual-paging {
+  display: inline-block;
+}
+.visual-paging button {
+  box-sizing: border-box;
+  width: 61px;
+  height: 60px;
+  padding-top: 60px;
+  overflow: hidden;
+  border: 1px solid #ececec;
+  background-color: #fff;
+  background-image: url("../images/icon_arrow.png");
+  background-repeat: no-repeat;
+  background-position: 24px 23px;
+  display: block;
+  float: left;
+}
+.btn-next {
+  transform: rotate(180deg);
+  margin-left: -5px;
+}
+.visual-cur-page {
+  color: #868686;
+  line-height: 1.29;
+  font-size: 1.4rem;
+}
+.total-page-no {
+  color: #868686;
+  font-size: 0.8rem;
+}
+.paging-text-group {
+  float: right;
+  padding-left: 20px;
+  padding: 25px 30px
+}
+.article-group2 .article-heading {
+  font-size: 3rem;
+  color: #222;
+  width: 600px;
+  padding: 50px 0;
+}
+.aside-group {
+  margin: 50px 0;
+}
+.video-group {
+  position: relative;
+  width: 600px;
+}
+.video-group figcaption {
+  padding: 20px 0;
+  text-align: center;
+}
+.video-info {
+  position: absolute;
+  width: 100%;
+  height: 320px;
+  top: 0;
+  opacity: .3;
+}
+.video-time {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+}
+.video-btn {
+  position: absolute;
+  bottom: 0;
+  margin: 60px;
+}
+.related-article-group p {
+  font-size: 1.6rem;
+  line-height: 1.88;
+}
+.related-article-group {
+  position: relative;
+  width: 600px;
+}
+.related-article-group h3 {
+  font-size: 1.8rem;
+  color: #222;
+  padding-bottom: 25px;
+}
+.related-article1 {
+  float: left;
+  display: block;
+  width: 45%;
+  text-align: left;
+}
+.related-article2 {
+  float: right;
+  display: block;
+  width: 45%;
+  text-align: left;
+}
+.sns-facebook::before, .sns-tweeter::before, .sns-gplus::before, .sns-pinterest::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/social_logos.png);
+  background-repeat: no-repeat;
+  transform: translate(7px, 7px);
+}
+.sns-facebook::before {
+  background-position: left 0px top 0px
+}
+.sns-pinterest::before {
+  background-position: right 0px top 0px
+}
+.sns-tweeter::before {
+  background-position: left -20px top 0px
+}
+.sns-gplus::before {
+  background-position: right -20px top 0px
+}
+.sns-btn-group input[type='button'] {
+  float: left;
+  width: 80px;
+  height: 35px;
+  border-radius: 20px;
+  border: 0;
+  color: #fff;
+  font-family: 'Oswald-Bold', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-align: right;
+  padding-right: 12px;
+  margin-right: 10px;
+}
+.btn-facebook {
+  background-color: #215b9a;
+}
+.btn-tweeter {
+  background-color: #00adf2;
+}
+.btn-gplus {
+  background-color: #ce4435;
+}
+.btn-pinterest {
+  background-color: #e51616;
+}
+.btn-back-blog {
+  display: block;
+  margin: 45px 0 100px 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.btn-back-blog::before {
+  content: "";
+  background: url('../images/icon_back.png') no-repeat;
+  width: 10px;
+  height: 8px;
+  padding-right: 15px;
+  vertical-align: middle;
+}
