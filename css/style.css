@@ -973,6 +973,7 @@ figcaption {
 .footer {
   padding: 15px 140px 15px 180px;
   position: relative;
+  font-weight: 100;
 }
 
 /* 푸터 로고 및 뱃지 */
