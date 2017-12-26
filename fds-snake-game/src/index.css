@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+}
+#game-root {
+  width: 50vw;
+  margin: 0 auto;
+}
+.table__row {
+  display: flex;
+}
+.table__cell {
+  flex-grow: 1;
+  box-sizing: border-box;
+  margin: 1px;
+  background: #7cbc0a linear-gradient(135deg, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%);
+  box-shadow: 1px 1px 3px 0px rgba(40, 65, 0, 0.8);
+}
+.table__cell::after {
+  display: block;
+  content: '';
+  padding-bottom: 100%;
+}
+.game.end .joint {
+  background: gray;
+}
+.joint {
+  background: black;
+}
+.fruit {
+  background: red;
+}
+.description {
+  margin-top: 1em;
+}
+.description .button {
+  display: block;
+  float: right;
+}
